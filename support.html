@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Link Transit</title>
+<meta name="description" content="Help with the Link Transit app: common questions, wrong fares, and how to delete your data.">
+<meta name="theme-color" content="#00875A">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Link Transit home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#00875A"/><path d="M16 46 L16 30 Q16 22 24 22 L40 22 Q48 22 48 30 L48 18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="46" r="6" fill="#fff"/><circle cx="16" cy="46" r="2.5" fill="#00875A"/><circle cx="48" cy="18" r="6" fill="#fff"/><circle cx="48" cy="18" r="2.5" fill="#00875A"/></svg>
+      <span>Link Transit</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="./">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <div class="doc-hero">
+    <span class="eyebrow">Support</span>
+    <h1>How can we help?</h1>
+    <p class="meta">Answers to common questions about riding with Link Transit.</p>
+  </div>
+
+  <article class="doc">
+    <div class="contact-card">
+      <div class="grow">
+        <h3>Get in touch</h3>
+        <!-- CONTACT-EMAIL: replace this text with the support email address -->
+        <p>Questions, a wrong route or stop, or a data request? Our support email is coming soon.</p>
+      </div>
+    </div>
+
+    <h2 id="faq">Common questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Do I need an account?</summary>
+        <p>No. There's no sign-up and the app never asks for your name, phone number or email. Open it and start planning.</p>
+      </details>
+      <details>
+        <summary>Does the app work without data or signal?</summary>
+        <p>Yes. The app saves a copy of the bus network on your phone, so you can find routes, plan trips and follow a guided ride without signal. The map background needs a connection to load, and fares refresh the next time you're online.</p>
+      </details>
+      <details>
+        <summary>What does "Town" mean?</summary>
+        <p>"Town" is the central bus ranks in the CBD: Kulima Tower, Millennium, Lumumba and City Market. When you plan a trip to Town, the app treats these as one place and picks the rank that fits your route best.</p>
+      </details>
+      <details>
+        <summary>How does a guided ride work?</summary>
+        <p>Pick a trip and tap to start. The app shows the stop to board at and the bus to look for, then counts down the stops as you ride and tells you when yours is next. If location is off, you can tap through the stops yourself.</p>
+      </details>
+      <details>
+        <summary>A fare in the app is wrong. What can I do?</summary>
+        <p>Report what you paid. After a guided ride the app asks "Did you pay…?", or you can report a fare from the route's page. When several riders report the same fare, it replaces the old one for everyone.</p>
+      </details>
+      <details>
+        <summary>Why does the app ask for my location?</summary>
+        <p>To show stops near you, plan from where you are, and count down your stops during a ride. Your location stays on your phone and is never sent to us. You can say no and use your saved Home or Town as a starting point instead. <a href="privacy.html#location">More on location</a>.</p>
+      </details>
+      <details>
+        <summary>A route, stop or name is wrong or missing.</summary>
+        <p>The network comes from the Digital Transport for Africa (DT4A) survey of Lusaka, and some things change after a survey. Let us know the route, the stop and what's different, and we'll fix it in the next data update.</p>
+      </details>
+      <details>
+        <summary>Is there an iPhone version?</summary>
+        <p>Not yet. Link Transit is coming to Android first, on Google Play.</p>
+      </details>
+    </div>
+
+    <h2 id="delete">Delete your data</h2>
+    <p>Link Transit has no accounts, so there's nothing to close. Here's how to remove what the app keeps.</p>
+
+    <h3>Data on your phone</h3>
+    <p>Your saved routes, Home, settings and the copy of the bus network are only on your phone. To remove them, either:</p>
+    <ul>
+      <li>uninstall Link Transit, or</li>
+      <li>go to <strong>Settings → Apps → Link Transit → Storage → Clear data</strong>.</li>
+    </ul>
+
+    <h3>Fare reports you sent</h3>
+    <p>Fare reports are stored with a random install ID, not your name or number, so we can't look you up by who you are. To have yours deleted, contact us and tell us:</p>
+    <ul>
+      <li>roughly <strong>when</strong> you sent the reports (date or week), and</li>
+      <li><strong>which route</strong> or routes they were for.</li>
+    </ul>
+    <p>We'll find the matching reports, delete them, and confirm by reply. You can also ask what we hold before deciding. Reports we don't receive a request for are deleted automatically after 2 years.</p>
+
+    <h3>Crash reports</h3>
+    <p>Crash reports are kept by Google Firebase Crashlytics and are deleted automatically after 90 days.</p>
+
+    <div class="callout">
+      <p>Your rights here come from Zambia's Data Protection Act, 2021. Read the full <a href="privacy.html">privacy policy</a> for details of what is collected and why.</p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Link Transit · Bus data from <a href="https://www.digitaltransport4africa.org/" rel="noopener">Digital Transport for Africa</a> · Map © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors</p>
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="support.html#delete">Delete your data</a>
+      <a href="privacy.html">Privacy policy</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
