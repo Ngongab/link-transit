@@ -32,16 +32,16 @@
   <div class="doc-hero">
     <span class="eyebrow">Privacy policy</span>
     <h1>Link Transit privacy policy</h1>
-    <p class="meta">Last updated: 17 November 2026</p>
+    <p class="meta">Last updated: 18 November 2026</p>
   </div>
 
   <article class="doc">
     <p>Link Transit helps you find and ride minibuses in Lusaka. You don't need an account and we never ask for your name, phone number or email. This page explains what the app uses, what leaves your phone, and why.</p>
 
     <div class="summary" aria-label="Summary">
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Your location never leaves your phone.</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Your GPS position never leaves your phone.</span></div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No account, no name, number or email.</span></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Fare reports and ride answers are sent only when you choose to.</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Fare reports, ride answers and shared buses are sent only when you choose to.</span></div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No ads. We never sell your data.</span></div>
     </div>
 
@@ -67,7 +67,7 @@
       <li>plan trips from where you are, and</li>
       <li>count down the stops during a guided ride, so it can tell you when to get off.</li>
     </ul>
-    <p><strong>Your location stays on your phone.</strong> Link Transit does not send it to us or to anyone else. Location is only used while the app is open. You can say no, or turn it off at any time in your phone's settings. Then the app works from your saved Home or from town, and during a ride you tap through the stops yourself.</p>
+    <p><strong>Your location stays on your phone.</strong> Link Transit does not send your position to us or to anyone else. The one exception is a bus you choose to share (see below): then the app sends which route you're on and the last stop the bus passed, which it works out on your phone, never your map position. Location is only used while the app is open. You can say no, or turn it off at any time in your phone's settings. Then the app works from your saved Home or from town, and during a ride you tap through the stops yourself.</p>
 
     <h2 id="sent">What is sent from your phone</h2>
     <div class="table-wrap">
@@ -83,6 +83,11 @@
             <td><strong>Ride answers</strong>: your answers to the questions at the end of a guided ride, "Where did this bus end?" and "Did the bus go the way the app showed?", with the route, the stops of your ride, the time, the app version and the same random ID</td>
             <td>Only when you tap an answer at the end of a ride</td>
             <td>To keep routes right for everyone, for example which rank in Town a bus really ends at. Answers from several riders are combined before anything in the app changes. Like fare reports, they are not linked to your name, number or Google account.</td>
+          </tr>
+          <tr>
+            <td><strong>A bus you share</strong>: the route, the last stop the bus passed, the time, and the same random install ID. Not your GPS position, your name, or where your trip started or ends</td>
+            <td>Only while you have "Share this bus with riders waiting" turned on during a ride. It stops when you tap Stop, reach your stop, or leave the ride</td>
+            <td>So riders waiting further along the route can see how far away the bus is. Other riders see only the bus: which route it's on, how many stops away it is and how recently it was seen. They never see the install ID or anything about you.</td>
           </tr>
           <tr>
             <td><strong>Crash reports</strong>: what went wrong in the app, your phone model, Android version, app version and an ID for this install of the app</td>
@@ -109,6 +114,7 @@
     <h2 id="storage">Where data is kept and for how long</h2>
     <ul>
       <li><strong>Fare reports and ride answers</strong> are stored in our database, hosted by Supabase in the United Kingdom (London). We keep them for up to 2 years to understand how fares and routes change, then delete them.</li>
+      <li><strong>Shared buses</strong> are stored in the same database while you share. Other riders see a bus for 2 minutes after its last update, and it is deleted within 10 minutes of your last update, or straight away when you stop sharing. We don't keep a history of shared rides.</li>
       <li><strong>Crash reports</strong> are kept by Google Firebase for 90 days.</li>
     </ul>
     <p>We don't sell data. We don't use it for advertising, and we don't share it with anyone except the service providers named here, who run the app for us.</p>
@@ -117,13 +123,13 @@
     <p>The routes, stops and the first fares come from the Digital Transport for Africa (DT4A) survey of Lusaka. Riders' reports keep the fares up to date. Map data is © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap contributors</a>.</p>
 
     <h2 id="rights">Your choices and rights</h2>
-    <p>You can use Link Transit without ever reporting a fare, answering a ride question or turning on location. Under Zambia's Data Protection Act, 2021, you can ask us what we hold about you and ask us to delete it. Fare reports and ride answers are tied only to a random install ID, so tell us roughly when you sent them and on which route, and we will find and remove them. See <a href="support.html#delete">how to delete your data</a>.</p>
+    <p>You can use Link Transit without ever reporting a fare, answering a ride question, sharing a bus or turning on location. Sharing a bus is off until you turn it on for a ride, and you can stop at any time. Under Zambia's Data Protection Act, 2021, you can ask us what we hold about you and ask us to delete it. Fare reports and ride answers are tied only to a random install ID, so tell us roughly when you sent them and on which route, and we will find and remove them. See <a href="support.html#delete">how to delete your data</a>.</p>
 
     <h2 id="children">Children</h2>
     <p>Link Transit is for the general public. It is not aimed at children, and we don't knowingly collect anything about them.</p>
 
     <h2 id="changes">Changes</h2>
-    <p>If the app starts collecting something new, for example sharing a bus's live position with other riders, we will update this page before that feature goes live. The app will ask you first.</p>
+    <p>If the app starts collecting something new, we will update this page before that feature goes live, and the app will ask you first.</p>
 
     <h2 id="contact">Contact</h2>
     <!-- CONTACT-EMAIL: replace the span below with <a href="mailto:you@example.com">you@example.com</a> -->
