@@ -49,6 +49,7 @@
       <p>On this page</p>
       <ol>
         <li><a href="#location">Your location</a></li>
+        <li><a href="#notifications">Notifications</a></li>
         <li><a href="#sent">What is sent from your phone</a></li>
         <li><a href="#on-phone">What stays on your phone</a></li>
         <li><a href="#storage">Where data is kept and for how long</a></li>
@@ -67,7 +68,17 @@
       <li>plan trips from where you are, and</li>
       <li>count down the stops during a guided ride, so it can tell you when to get off.</li>
     </ul>
-    <p><strong>Your location stays on your phone.</strong> Link Transit does not send your position to us or to anyone else. The one exception is a bus you choose to share (see below): then the app sends which route you're on and the last stop the bus passed, which it works out on your phone, never your map position. Location is only used while the app is open. You can say no, or turn it off at any time in your phone's settings. Then the app works from your saved Home or from town, and during a ride you tap through the stops yourself.</p>
+    <p><strong>Your location stays on your phone.</strong> Link Transit does not send your position to us or to anyone else. The one exception is a bus you choose to share (see below): then the app sends which route you're on and the last stop the bus passed, which it works out on your phone, never your map position. Location is used while the app is open, and during a guided ride you started: then the app keeps counting down the stops with your screen off, so it can buzz before your stop, and shows a "Get off in 3 stops" notification for as long as it does. That stops when you reach your stop, end the ride or close the app. You can say no, or turn it off at any time in your phone's settings. Then the app works from your saved Home or from town, and during a ride you tap through the stops yourself.</p>
+
+    <h2 id="notifications">Notifications</h2>
+    <p>Link Transit asks before it shows any notification. It asks when you first need one, for example when you start a ride or save a route, not when you open the app.</p>
+    <ul>
+      <li><strong>During a ride</strong>: a "Get off in 3 stops" notification, and an alert that buzzes before your stop. These are made on your phone from your phone's location. Nothing is sent for them.</li>
+      <li><strong>"Tell me when a bus is close"</strong>: while you have this on for a route, the app checks every few seconds for buses other riders are sharing on that route, including with your screen off, and shows a "Watching for the bus" notification. To check, it asks our database about the route, the same way the app does when you look at a route. It doesn't send your location or your install ID. It stops after the bus is close, after 45 minutes, when you start a ride or when you tap Stop watching.</li>
+      <li><strong>Saved route news</strong>: news about routes you saved, such as a new fare, a rank that moved or a strike. To send it, the app tells Google Firebase Cloud Messaging which routes you saved, as "topics". We send each message to a topic, so we don't know which phones receive it and we don't store anything about you for this.</li>
+      <li><strong>When my reports help</strong>: a message when riders agree with a fare you reported. For this one we store your phone's notification token (an address Google Firebase gives the app for sending it messages) with your random install ID. We only store it after you have reported a fare, and we delete it when you turn this off.</li>
+    </ul>
+    <p>Messages are delivered by Google Firebase Cloud Messaging. You can turn Saved route news and When my reports help off on the You page, and all notifications off in your phone's settings.</p>
 
     <h2 id="sent">What is sent from your phone</h2>
     <div class="table-wrap">
@@ -95,6 +106,16 @@
             <td>So the Link Transit team can check it and correct the map for everyone. The spot is one you choose by moving the map, never where you are.</td>
           </tr>
           <tr>
+            <td><strong>Routes you follow for news</strong>: the routes you saved, as Firebase Cloud Messaging topics</td>
+            <td>While Saved route news is on and you have saved routes</td>
+            <td>So we can send news about a route to the people who saved it, without knowing who they are.</td>
+          </tr>
+          <tr>
+            <td><strong>Notification token</strong>: the address Google Firebase gives the app for sending it messages, with the same random install ID</td>
+            <td>Only while When my reports help is on, and only after you have reported a fare</td>
+            <td>To tell you when riders agree with a fare you reported.</td>
+          </tr>
+          <tr>
             <td><strong>Crash reports</strong>: what went wrong in the app, your phone model, Android version, app version and an ID for this install of the app</td>
             <td>When the app crashes or hits an error</td>
             <td>To find and fix bugs. Collected by Google Firebase Crashlytics.</td>
@@ -120,6 +141,7 @@
     <ul>
       <li><strong>Fare reports, ride answers and fixes</strong> are stored in our database, hosted by Supabase in the United Kingdom (London). We keep them for up to 2 years to understand how fares and routes change, then delete them.</li>
       <li><strong>Shared buses</strong> are stored in the same database while you share. Other riders see a bus for 2 minutes after its last update, and it is deleted within 10 minutes of your last update, or straight away when you stop sharing. We don't keep a history of shared rides.</li>
+      <li><strong>Your notification token</strong> is stored in the same database until you turn off When my reports help, or until Google Firebase tells us it no longer works (for example after you uninstall the app). The messages we send, with the install ID for a "your report helped" message, are kept for up to 2 years, like fare reports.</li>
       <li><strong>Crash reports</strong> are kept by Google Firebase for 90 days.</li>
     </ul>
     <p>We don't sell data. We don't use it for advertising, and we don't share it with anyone except the service providers named here, who run the app for us.</p>
@@ -128,7 +150,7 @@
     <p>The routes, stops and the first fares come from the Digital Transport for Africa (DT4A) survey of Lusaka. Riders' reports and fixes keep the fares, routes and stops up to date. What you send becomes part of Link Transit's route data: by sending it, you agree we can use it in the app and share it as part of that data, without your install ID. Map data is © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap contributors</a>.</p>
 
     <h2 id="rights">Your choices and rights</h2>
-    <p>You can use Link Transit without ever reporting a fare, answering a ride question, sending a fix, sharing a bus or turning on location. Sharing a bus is off until you turn it on for a ride, and you can stop at any time. Under Zambia's Data Protection Act, 2021, you can ask us what we hold about you and ask us to delete it. Fare reports, ride answers and fixes are tied only to a random install ID, so tell us roughly when you sent them and on which route, and we will find and remove them. See <a href="support.html#delete">how to delete your data</a>.</p>
+    <p>You can use Link Transit without ever reporting a fare, answering a ride question, sending a fix, sharing a bus, turning on location or allowing notifications. Sharing a bus is off until you turn it on for a ride, and you can stop at any time. Notifications can be turned off on the You page or in your phone's settings. Under Zambia's Data Protection Act, 2021, you can ask us what we hold about you and ask us to delete it. Fare reports, ride answers and fixes are tied only to a random install ID, so tell us roughly when you sent them and on which route, and we will find and remove them. See <a href="support.html#delete">how to delete your data</a>.</p>
 
     <h2 id="children">Children</h2>
     <p>Link Transit is for the general public. It is not aimed at children, and we don't knowingly collect anything about them.</p>
